@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      body {
+        font-family: "Montserrat", "verdana";
+      }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      table {
+        margin-left: 25%;
+        margin-top: 30px;
+        border-spacing: 3px;
+        width: 50%;
+      }
+
+      table,
+      td {
+        border: 2px solid #fff;
+        border-radius: 7px;
+        padding: 5px;
+      }
+
+      td {
+        text-align: center;
+        font-size: 18px;
+        background-color: aquamarine;
+      }
+
+      tr {
+        height: 45px;
+      }
+
+      caption {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .header {
+        font-weight: bold;
+      }
+
+      .width {
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Table</h1>
+    <table>
+      <caption>
+        Students enrolled in Full Stack Bootcamp
+      </caption>
+      <tr>
+        <td colspan="3" class="header">Full Stack development</td>
+      </tr>
+      <tr>
+        <td class="header">Sr.no</td>
+        <td class="header width">Name</td>
+        <td class="header width">Instructor</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Shubham</td>
+        <td rowspan="2">Hitesh Choudhary</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paras</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rohit</td>
+        <td rowspan="2">Navin Reddy</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Kapil</td>
+      </tr>
+      <tr>
+        <td class="header">Fees</td>
+        <td colspan="2">₹17700</td>
+      </tr>
+    </table>
+  </body>
+</html>

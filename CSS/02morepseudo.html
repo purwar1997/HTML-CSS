@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psuedo Selectors</title>
+    <style>
+      body {
+        background-color: #414141;
+        color: #ffffff;
+      }
+
+      /* ::before and ::after can only come with container elements */
+      /* ::before */
+      .imp-label::before {
+        content: "User";
+      }
+
+      .emailId::before {
+        content: "Enter ";
+      }
+
+      /* ::after */
+      .emailId::after {
+        content: " Id";
+      }
+
+      p::before {
+        /* content property is compulsory */
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px; /* half of width to make circle */
+        background-color: #0df0f0;
+      }
+
+      p::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #0df0f0;
+      }
+
+      button {
+        padding: 3px;
+        font-size: 16px;
+        font-family: verdana;
+        margin-left: 8px;
+      }
+
+      /* attribute selectors */
+      button[type="submit"]::after,
+      button[type="reset"]::after {
+        content: " Form";
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form action="" method="get">
+        <label class="imp-label" for="name">name</label>
+        <input type="text" name="name" id="name" />
+
+        <label class="emailId" for="email">Email</label>
+        <input type="email" name="email" id="email" />
+
+        <!-- title attribute is used to display tooltip information -->
+        <button title="Submit form" type="submit">Submit</button>
+        <button title="Reset" type="reset">Reset</button>
+      </form>
+    </div>
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam sit repellendus id beatae
+        eius molestias, ducimus quo quasi quos assumenda, itaque laborum atque labore? Soluta necessitatibus
+        neque sed veniam!
+      </p>
+    </div>
+  </body>
+</html>

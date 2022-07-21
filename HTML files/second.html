@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML lecture</title>
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+        font-family: "verdana";
+      }
+
+      iframe,
+      video {
+        border: 3px solid gray;
+        margin: 7px;
+      }
+
+      audio,
+      video,
+      iframe {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Welcome to another HTML lecture</p>
+
+    <!-- image -->
+    <!-- img is an inline element -->
+    <!-- png images are expected to not have background color -->
+
+    <a href="#"><img src="../Assets/image1.png " height="130px" width="130px" alt="iNeuron image" /></a>
+    <img src="../Assets/lco.png" height="70px" width="70px" alt="LCO logo" />
+
+    <!-- image with attributes -->
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8fKl2hrFEpFDi1j8bObp70q_grzGSF885ig&usqp=CAU"
+      height="130px"
+      width="130px"
+      alt="Javascript image"
+    />
+
+    <!-- clickable images -->
+    <p>
+      To visit learncodeonline, click on the image
+      <!-- image as a link -->
+      <a href="https://lco.dev/" target="_blank"
+        ><img src="../Assets/lco.png" height="70px" width="70px" alt="LCO logo"
+      /></a>
+    </p>
+
+    <!-- p is a block-level and span is an inline element -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, libero.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias accusantium voluptas commodi
+      possimus recusandae tempora? <span>Inline tag</span>
+    </p>
+
+    <!-- these tags make no visible difference on the web page
+         they are used to define the content of the web page -->
+
+    <div></div>
+    <nav></nav>
+    <article></article>
+    <section></section>
+    <footer></footer>
+
+    <!-- audio in a div -->
+    <audio controls src="../Assets/sample-audio.mp3"></audio><br />
+
+    <audio controls>
+      <source src="../Assets/sample-audio.mp3" />
+    </audio>
+
+    <!-- video in a div -->
+    <video controls height="300px" width="500px" src="../Assets/sample-video.mp4"></video>
+
+    <video controls height="300px" width="500px">
+      <source src="../Assets/sample-video.mp4" />
+    </video>
+
+    <!-- iframe -->
+    <iframe
+      width="400px"
+      height="250px"
+      src="https://www.youtube.com/embed/xQ_XTxmLxHg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+
+    <iframe
+      width="400px"
+      height="250px"
+      src="https://www.youtube.com/embed/waGfV-IoOt8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <!-- audio, video and iframe are all inline elements -->
+  </body>
+</html>

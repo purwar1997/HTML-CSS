@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+      /* hover */
+      li:hover {
+        color: #ffffff;
+        background-color: #e83a59;
+        padding: 2px;
+        font-size: 18px;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+        border: 2px solid #000000;
+        border-radius: 5px;
+      }
+
+      p.long:hover {
+        color: #ffffff;
+        background-color: #207398;
+        padding: 3px;
+        font-size: 18px;
+        font-family: "Montserrat";
+        border: 2px solid #242b2e;
+        border-radius: 5px;
+      }
+
+      input {
+        display: block;
+        margin-top: 8px;
+        padding: 5px;
+      }
+
+      /* focus */
+      input:focus {
+        background-color: #a6c2da;
+        color: #03203c;
+        padding: 3px;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      /* first child, last child, nth child */
+      /* n => for all, 2n => for even, 2n-1 / 2n+1 => for odd */
+
+      ul > li:nth-child(2n - 1) {
+        background-color: #98e4cb;
+        color: #000000;
+      }
+
+      div > li:first-child {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      section p:nth-child(2n) {
+        background-color: #c28e4a;
+      }
+
+      table {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 50px;
+        border-collapse: collapse;
+      }
+
+      table,
+      td {
+        border: 2px solid #242b2e;
+      }
+
+      td {
+        padding: 5px;
+        width: 35%;
+        text-align: center;
+        font-size: 18px;
+        font-family: "Montserrat";
+      }
+
+      tr {
+        height: 40px;
+      }
+
+      tr:first-child,
+      tr:last-child {
+        font-weight: bold;
+      }
+
+      tr:nth-child(2n-1) {
+        background-color: #a6c2da;
+      }
+
+      /* custom attributes */
+      /* all elements which contain lco-code attribute will get selected */
+      [lco-code] {
+        font-family: "Verdana";
+        font-size: 20px;
+        text-decoration: underline;
+      }
+
+      [lco-code]:hover {
+        background-color: #e83a59;
+        color: #000000;
+        border: 2px solid #000000;
+        padding: 3px;
+      }
+
+      [iNeuron] {
+        font-size: 22px;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      div[live-class] {
+        background-color: rgb(177, 191, 204);
+      }
+
+      div[live-class]::after {
+        content: ". This class is about CSS.";
+      }
+
+      div[live-class]:hover {
+        font-size: 20px;
+        font-family: "Montserrat";
+        border: 2px solid #000000;
+        padding: 3px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="long">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias debitis distinctio nulla
+        modi excepturi magni perferendis consectetur quidem eos?
+      </p>
+    </div>
+    <div live-class>Welcome to live class</div>
+    <span>Span is just a span, nothing more</span>
+    <p class="long">We all know paragraph</p>
+    <div>
+      <input type="text" name="email" placeholder="email" id="" />
+      <input type="password" name="password" placeholder="password" />
+    </div>
+    <ul>
+      <li class="bg-black text-white">item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+    </ul>
+
+    <div>
+      <li>awesome</li>
+      <ul>
+        <li>highlight me</li>
+        <li>highlight me</li>
+      </ul>
+      <li>please highlight me</li>
+    </div>
+
+    <section>
+      <p>Test 1</p>
+      <p>Test 2</p>
+      <p>Test 3</p>
+      <p>Test 4</p>
+      <!-- lco-code and iNeuron are custom attributes which contain no value inside them -->
+      <!-- custom attributes are not a part of HTML itself. They are created by the programmer  -->
+      <p lco-code>Test 5</p>
+      <p iNeuron>Test 6</p>
+    </section>
+
+    <section>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>College</td>
+          <td>Year</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Shubham</td>
+          <td>VIT Bhopal</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td colspan="3">Btech</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

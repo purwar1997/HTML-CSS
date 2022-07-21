@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* universal selector */
+      * {
+        background-color: #4d4d4d;
+        color: #ffffff;
+        font-size: 18px;
+      }
+
+      /* individual selector */
+      p {
+        color: #9acd32;
+        font-family: "Verdana";
+        text-decoration: underline;
+      }
+
+      span {
+        color: #80800c;
+        font-size: 22px;
+        word-spacing: 5px;
+      }
+
+      /* class and id selector */
+      #cool {
+        background-color: aquamarine;
+        color: #000000;
+      }
+
+      #hot {
+        color: rgb(241, 35, 35);
+        text-decoration: underline;
+      }
+
+      .big {
+        font-size: 25px;
+        padding: 3px;
+      }
+
+      .border {
+        border: 2px solid #daa520;
+        display: inline;
+        margin-left: 5px;
+        padding: 4px;
+      }
+
+      /* and selector (chained) */
+      /* . represents AND which selects only those elements which contain all the mentioned classes */
+
+      li.bg-black.text-white {
+        color: #ffffff;
+        font-family: verdana;
+      }
+
+      p.class1.class2.class3 {
+        background-color: #3a5f80;
+      }
+
+      /* combined selector */
+      p.lorem,
+      label,
+      li.lorem {
+        color: #adff2f;
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      /* inside an element */
+      /* to create a heirarchy */
+
+      div ul li {
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      section ul li {
+        background-color: #03203c;
+      }
+
+      section ol li {
+        color: #03203c;
+        font-style: italic;
+      }
+
+      /* direct child */
+      div > li {
+        font-size: 25px;
+        color: #1faa59;
+      }
+
+      section > p.lorem,
+      p > label {
+        background-color: #b9345a;
+      }
+
+      section > ol > li > a {
+        color: #d82e2f;
+        font-size: 22px;
+        text-decoration: none;
+      }
+
+      /* sibling  ~ or + */
+
+      /* + operator will select only one p (sibling element) after .sibling class */
+      /* .sibling + p {
+        color: #000000;
+        background-color: pink;
+      } */
+
+      /* ~ operator will select all the p (sibling elements) after .sibling class */
+      .sibling ~ p {
+        color: #000000;
+        background-color: #ffc0cb;
+      }
+
+      /* all sibling span elements will be selected after p element */
+      article p ~ span {
+        display: block;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      nav > span {
+        display: block;
+      }
+
+      /* attribute selectors */
+      nav a[target="_blank"] {
+        font-size: 20px;
+        color: #adff2f;
+        font-family: verdana;
+      }
+
+      nav a[href="#"] {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Welcome to live class</div>
+    <span>Span is just a span, nothing more</span>
+    <p>We all know paragraph</p>
+    <ul>
+      <li class="bg-black text-white">item1</li>
+      <li id="cool">item2</li>
+      <li id="hot">item3</li>
+      <li class="big">item4</li>
+      <li class="big">item5</li>
+    </ul>
+
+    <div>
+      <li>awesome</li>
+      <ul>
+        <li class="border">highlight me</li>
+        <li class="border">highlight me</li>
+      </ul>
+      <li>test</li>
+    </div>
+
+    <section>
+      <p class="class1 class2 class3">Test 1</p>
+      <p class="sibling">Test 2</p>
+      <p>Test 3</p>
+      <p>Test 4</p>
+      <p>Test 5</p>
+    </section>
+    <hr />
+
+    <section>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quisquam iste rerum, quaerat accusamus
+        voluptatem error consectetur architecto! Similique nulla provident officia saepe delectus excepturi
+        facere quod, aliquid repellat suscipit!
+      </p>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quidem!<label>Lorem, ipsum.</label>
+      </p>
+      <ul>
+        <li class="lorem">Lorem, ipsum.</li>
+        <li class="lorem">Lorem, ipsum.</li>
+        <li class="lorem">Lorem, ipsum.</li>
+      </ul>
+      <ol>
+        <li>To visit iNeuron webiste, <a href="#">click Here</a></li>
+        <li>To visit iNeuron webiste, <a href="#">click Here</a></li>
+      </ol>
+    </section>
+
+    <article>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis officia odit, accusantium
+        unde laudantium.
+      </p>
+      <span>Lorem, ipsum.</span><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span>
+    </article>
+    <br /><br />
+    <nav>
+      <span>To visit us, <a href="#">click here</a></span>
+      <span>To visit us, <a href="https://www.netflix.com/in/" target="_blank">click here</a></span>
+      <span>To visit us, <a href="https://lco.dev/" target="_blank">click here</a></span>
+    </nav>
+  </body>
+</html>

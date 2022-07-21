@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    </script>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <form action="" method="GET">
+      <label for="fullname">Full Name: </label>
+      <input
+        type="text"
+        name="fullname"
+        id = "fullname"
+        placeholder="eg. Anil Kapoor"
+        required
+        autofocus
+      /><br /><br />
+
+      <label for="age">Age: </label>
+      <input type="number" name="age" id="age" max="40" min="16" required /><br /><br />
+
+      <label>Date of Birth: <input type="date" required></label><br><br>
+
+      <label>Email: <input type="email" name="email" placeholder="eg. shubham@gmail.com" required /></label
+      ><br /><br />
+
+      <label>Password: <input type="password" name="password" maxlength="12" required /></label><br /><br />
+
+      <label>Select your gender:</label>
+      <label><input type="radio" name="gender" value="male" required />Male</label>
+      <label><input type="radio" name="gender" value="female" checked />Female</label><br /><br />
+
+      <label>Which social media do you use ?</label><br />
+      <label><input type="checkbox" name="media" value="facebook" />Facebook</label><br />
+      <label><input type="checkbox" name="media" value="instagram" />Instagram</label><br />
+      <label><input type="checkbox" name="media" value="twitter" />Twitter</label><br />
+      <label><input type="checkbox" name="media" value="linkedin" />LinkedIn</label><br />
+      <label><input type="checkbox" name="media" value="snapchat" />Snapchat</label><br /><br />
+
+      <label>Select your language: </label>
+      <label><input type="checkbox" name="language" value="Hindi" checked />Hindi</label>
+      <label><input type="checkbox" name="language" value="Mararthi" />Mararthi</label>
+      <label><input type="checkbox" name="language" value="Tamil" />Tamil</label><br /><br />
+
+      <label for="state">Select your state: </label>
+      <select name="state" id="state" required>
+        <option value="--select your state--">--select your state--</option>
+        <option value="Uttar Pradesh" selected>Uttar Pradesh</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Gujarat">Gujarat</option></select
+      ><br /><br />
+
+      <label for="qna">Have any query, ask us</label><br /><br />
+      <textarea name="query" id="qna" cols="50" rows="5" placeholder="Type your question..."></textarea
+      ><br /><br />
+
+      <!-- to upload files -->
+      <span>Upload your photo: <input type="file" required></span><br><br>
+      <span>Upload your signature: <input type="file" required></span><br><br>
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset"><br /><br />
+    </form>
+
+    <!-- using button as a link -->
+    <span
+      >To visit home page, <a href="second.html"><button>Click here</button></a></span
+    >
+  </body>
+</html>
