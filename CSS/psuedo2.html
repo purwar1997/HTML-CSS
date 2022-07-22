@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psuedo selectors</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+      body {
+        font-family: "Montserrat";
+      }
+      h1:active,
+      p:active {
+        border: 2px solid black;
+        background-color: #7fffd4;
+      }
+      a:active {
+        background-color: #e2c8a9;
+        font-size: 20px;
+        color: #1f1f1f;
+      }
+      h2:hover {
+        border: 2px solid #1f1f1f;
+        background-color: #8cacc7;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Active selector</h1>
+    <h2>Second heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quia cum neque amet magnam earum
+      perferendis eius quasi ex adipisci voluptatibus tempore alias tenetur quae totam, dolore nobis saepe
+      praesentium.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, totam? Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Aliquid, inventore. <a href="#">Click here</a>
+    </p>
+    <div><a href="#">Link</a></div>
+  </body>
+</html>
