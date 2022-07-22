@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Position</title>
+    <title>CSS Position: Fixed</title>
     <style>
       .green {
         background-color: green;
@@ -26,38 +26,41 @@
         padding: 5px;
         display: block;
       }
-
-      /* In case of position: relative, element is moved top, bottom ,left and right in reference to its original position */
       .big {
-        /* vh -> viewport height , vw -> viewport width */
-        height: 70vh;
-        width: 80vw;
-        position: relative;
-        top: 20px;
-        left: 30px;
+        height: 200vh;
       }
+
+      /* in absolute and fixed positions, element is taken out of DOM tree and then inserted */
+      /* in relative and static postions, element is not taken out of DOM tree  */
+      /* in position: fixed, element is positioned in reference to browser window */
       .one {
-        height: 10vh;
-        width: 50vw;
-        position: relative;
-        bottom: 10px;
-        left: 30px;
+        position: fixed;
+        top: 80px;
+        right: 150px;
       }
       .two {
-        position: relative;
-        left: 25px;
-        top: 10px;
+        position: fixed;
+        top: 20vh;
+        left: 30vw;
       }
-      .three {
-        position: relative;
-        top: 20px;
-        right: 10px;
-        height: 20vh;
-        width: 60vw;
+      img {
+        height: 100px;
+        width: 100px;
+        position: fixed;
+      }
+      .lco {
+        top: 30px;
+        left: 30px;
+      }
+      .iNeuron {
+        top: 30px;
+        right: 30px;
       }
     </style>
   </head>
   <body>
+    <img class="lco" src="../Assets/lco.png" alt="LCO logo" />
+    <img class="iNeuron" src="../Assets/image1.png" alt="iNeuron logo" />
     <div class="big orange">
       Big
       <div class="one green">One</div>
